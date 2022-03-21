@@ -45,6 +45,7 @@ class EpubViewer {
       "bookPath": bookPath,
       'lastLocation': lastLocation == null ? '' : jsonEncode(lastLocation.toJson()),
     };
+    print("Open Epub Book using Eddyson Library");
     _channel.invokeMethod('setChannel');
     await _channel.invokeMethod('open', agrs);
   }
